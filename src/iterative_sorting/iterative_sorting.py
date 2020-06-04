@@ -25,10 +25,19 @@ print(selection_sort([3, 2, 4, 1, 5, 9, 8, 6, 7]))
 
 
 def bubble_sort(arr):
-    # Your code here
+    for i in range(0, len(arr)-1):
+        # inner loop over j from 0 to n - 1 - i -> last sorted element
+        for j in range(0, len(arr)-1-i):
+            # compare the current element to element to its right
+            # if element on the left is greater than on the right
+            if arr[j] > arr[j+1]:
+                # swap
+                arr[j], arr[j+1] = arr[j+1], arr[j]
 
     return arr
 
+
+print(bubble_sort([23, 12, 65, 32, 99, 66, 54]))
 
 '''
 STRETCH: implement the Count Sort function below
